@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-['Plus_Jakarta_Sans'] antialiased overflow-x-hidden;
+            }
+        }
+        :root {
+            --emerald-deep: #042f24;
+            --emerald-silk: #064e3b;
+            --gold-accent: #d4af37;
+            --dana-blue: #118ee9;
+            --dana-light-blue: #2db1ff;
+            --dana-protection-blue: #0085ff;
+        }
+        .silk-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+        }
+        .islamic-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0l4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12zm0 40l4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12zM0 40l4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12zm80 0l4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        }
+        .dana-button-primary {
+            background: linear-gradient(180deg, var(--dana-light-blue) 0%, var(--dana-blue) 100%);
+            box-shadow: 0 4px 0px #0c7cd5;
+        }
+        .dana-button-primary:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0px #0c7cd5;
+        }
+        .dana-button-secondary {
+            background: #ffffff;
+            color: var(--dana-blue);
+            box-shadow: 0 4px 0px #e2e8f0;
+        }
+        .dana-button-secondary:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0px #e2e8f0;
+        }
+        .dana-button-receipt {
+            background: linear-gradient(180deg, #5fc3ff 0%, #118ee9 100%);
+            box-shadow: 0 4px 0px #0a74c1;
+        }
+        .qris-card {
+            background: #ffffff;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+        }
+        .promotion-text {
+            background: linear-gradient(to bottom, #ffffff 0%, #e0f2ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(17, 142, 233, 0.3);
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            20% { opacity: 0.6; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+        .ketupat {
+            position: fixed;
+            top: -50px;
+            pointer-events: none;
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));
+            animation: fall linear infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#042f24",
+                        "accent": "#d4af37",
+                        "dana": "#118ee9"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<title>Ranara payment</title>
+ <link rel="icon" type="image/png" href="dreamina-2026-02-24-4506-buatkan_logo_aplikasi_bank_dengan_nama_R...-removebg-preview.png">
+</head>
+<body class="bg-[#021d17] min-h-screen text-white selection:bg-dana selection:text-white">
+<div class="ketupat text-accent/20" style="left: 5%; font-size: 24px; animation-duration: 12s; animation-delay: 0s;">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pentagon</span>
+</div>
+
+<div class="ketupat text-accent/15" style="left: 20%; font-size: 32px; animation-duration: 15s; animation-delay: 2s;">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pentagon</span>
+</div>
+<div class="ketupat text-accent/10" style="left: 45%; font-size: 20px; animation-duration: 18s; animation-delay: 5s;">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pentagon</span>
+</div>
+<div class="ketupat text-accent/25" style="left: 70%; font-size: 28px; animation-duration: 14s; animation-delay: 1s;">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pentagon</span>
+</div>
+<div class="ketupat text-accent/15" style="left: 85%; font-size: 40px; animation-duration: 20s; animation-delay: 8s;">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pentagon</span>
+</div>
+<div class="fixed inset-0 islamic-pattern pointer-events-none z-0"></div>
+<div class="fixed inset-0 silk-texture pointer-events-none z-0"></div>
+<div class="relative flex min-h-screen w-full flex-col z-10">
+<header class="flex items-center justify-between px-6 py-4 lg:px-40 bg-black/40 backdrop-blur-md sticky top-0 z-50 border-b border-white/5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center rounded-lg bg-dana text-white">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<h2 class="text-base font-bold text-white tracking-tight uppercase">DANA Kaget</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-8 w-8 rounded-full border-2 border-dana overflow-hidden shadow-lg shadow-dana/20">
+<img alt="Profile" class="w-full h-full object-cover" src="pp.jpg"/>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center py-10 px-4">
+<div class="max-w-[480px] w-full flex flex-col gap-6">
+<div class="glass-card rounded-3xl p-5 flex flex-col gap-5 relative overflow-hidden">
+
+<div class="absolute inset-0 bg-gradient-to-br from-dana/10 to-accent/5 opacity-30"></div>
+
+<div class="flex items-center justify-between relative z-10">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-white/50 font-bold">
+Saldo Tersedia
+</p>
+<h2 class="text-3xl font-extrabold text-white tracking-tight mt-1 drop-shadow-[0_0_12px_rgba(17,142,233,0.5)]">
+Rp 20.000.000
+</h2>
+</div>
+<div class="bg-dana/20 p-3 rounded-2xl text-dana shadow-lg shadow-dana/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">
+account_balance_wallet
+</span>
+</div>
+</div>
+
+<div class="h-[1px] w-full bg-white/10 relative z-10"></div>
+
+<div class="grid grid-cols-2 gap-4 relative z-10">
+
+<div class="flex items-center justify-between bg-white/5 p-4 rounded-2xl border border-white/10">
+<div>
+<p class="text-[9px] uppercase tracking-widest text-white/50 font-bold">
+Total Kirim
+</p>
+<h3 class="text-lg font-bold text-accent mt-1 drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
+Rp 4.330.000
+</h3>
+</div>
+<span class="material-symbols-outlined text-accent" style="font-variation-settings: 'FILL' 1">
+send
+</span>
+</div>
+
+<div class="flex items-center justify-between bg-white/5 p-4 rounded-2xl border border-white/10">
+<div>
+<p class="text-[9px] uppercase tracking-widest text-white/50 font-bold">
+Total Diterima
+</p>
+<h3 class="text-lg font-bold text-green-400 mt-1 drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]">
+Rp 8.250.000
+</h3>
+</div>
+<span class="material-symbols-outlined text-green-400" style="font-variation-settings: 'FILL' 1">
+south_west
+</span>
+</div>
+
+</div>
+
+</div>
+<div class="glass-card rounded-[2.5rem] p-6 md:p-8 flex flex-col items-center gap-6 relative overflow-hidden">
+<div class="flex flex-col items-center gap-4 relative z-10">
+<div class="relative">
+<div class="absolute inset-0 bg-dana/20 blur-2xl rounded-full scale-125"></div>
+<div class="bg-gradient-to-tr from-accent/50 to-white/20 p-[3px] rounded-full relative z-10">
+<div class="bg-primary aspect-square rounded-full size-32 md:size-36 flex items-center justify-center overflow-hidden border-[6px] border-[#021d17]">
+<img src="pp.jpg" alt="Dyroth Flame Edition" class="w-full h-full object-cover"/>
+</div>
+</div>
+<div class="absolute bottom-1 right-1 bg-dana text-white p-1 rounded-full shadow-lg border-2 border-white">
+<span class="material-symbols-outlined text-[12px] font-bold block">check</span>
+</div>
+</div>
+<div class="text-center">
+<h3 class="text-white text-xl font-bold tracking-tight uppercase">RADITYA NAUFAL R</h3>
+<div class="bg-accent/10 border border-accent/20 px-3 py-0.5 rounded-full mt-2 inline-block">
+<p class="text-accent font-bold text-[9px] uppercase tracking-[0.2em]">Ranara Eid Edition</p>
+</div>
+</div>
+</div>
+<div class="w-full relative z-10">
+<div class="qris-card">
+<div class="p-4 flex flex-col items-center border-b border-gray-100">
+<div class="flex justify-between w-full items-center mb-2">
+<div class="flex flex-col items-start leading-none">
+<div class="flex items-center gap-0.5">
+<span class="text-[#1b71b8] font-black italic text-2xl leading-none tracking-tighter">QRIS</span>
+</div>
+<span class="text-[5px] text-gray-400 font-bold uppercase leading-none mt-0.5">Quick Response Code Indonesian Standard</span>
+</div>
+<div class="flex items-center gap-2">
+<img alt="GPN Logo" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtOw_J7hMkheMHMxHALNt0hsXkDAFKH5zSGDoGFkJ4cD56gyX5-pauJTsHMqL9woUwlAy8qBI1XtIGroceokayurQPG-guCLwJjnbOql_YwY9taq7sWC9612wLG7hskhyDV0jnhRi91zc7M-2s5rPQcYYlDbpZhUvOGZlfKYzULXfEi3oTpY4ymiVw-qbv3qd7f-uh6aE222xX1UFoljMAI4YcaGTb8Jd6aMwH9eAo0bhAqrx3d-bBDj6FNPA-QSCHN2qyY0rXj-D8"/>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col items-center">
+<div class="bg-white p-2 rounded-lg relative w-full aspect-square max-w-[240px]">
+<div class="w-full h-full bg-white flex items-center justify-center relative">
+<svg class="w-full h-full text-black" fill="currentColor" viewBox="0 0 100 100">
+<path d="M10 10h30v30H10V10zm5 5v20h20V15H15zm45-5h30v30H60V10zm5 5v20h20V15H65zM10 60h30v30H10V60zm5 5v20h20V65H15zm55 5h10v10H70V70zm10-10h10v10H80V60zm-10 0h10v10H70V60zm10 20h10v10H80V80zM45 45h10v10H45V45zm10 10h10v10H55V55zm0-20h10v10H55V35zm10 10h10v10H65V45zm-20 10h10v10H45V55zm-10 0h10v10H35V55zm20 20h10v10H55V75zm-10 0h10v10H45V75zm10-10h10v10H55V65zm-20 0h10v10H35V65zm20-20h10v10H55V45z"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white p-1 rounded-md shadow-sm border border-gray-100">
+<div class="w-7 h-7 bg-[#1b71b8] rounded flex items-center justify-center">
+<span class="text-white font-bold text-[10px]">QR</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-4">
+<p class="text-gray-900 text-xl font-extrabold tracking-tight">RADITYA NAUFAL R</p>
+<p class="text-gray-400 text-[9px] font-bold mt-1 uppercase tracking-widest">NMID: ID102221445091</p>
+</div>
+</div>
+<div class="h-1.5 w-full bg-gradient-to-r from-[#1b71b8] via-red-500 to-[#1b71b8]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-full relative z-10">
+<button class="dana-button-primary flex items-center justify-center gap-2 rounded-xl h-14 text-white text-base font-bold transition-all">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span>Buka DANA</span>
+</button>
+<div class="grid grid-cols-2 gap-3">
+<button class="dana-button-secondary flex items-center justify-center gap-2 rounded-xl h-12 text-sm font-bold border border-gray-100 transition-all">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Unduh QR</span>
+</button>
+<button class="dana-button-secondary flex items-center justify-center gap-2 rounded-xl h-12 text-sm font-bold border border-gray-100 transition-all">
+<span class="material-symbols-outlined text-lg">share</span>
+<span>Bagikan</span>
+</button>
+</div>
+<button class="dana-button-receipt flex items-center justify-center gap-2 rounded-xl h-12 text-sm font-bold text-white transition-all mt-1">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+<span>Unduh Struk Pembayaran</span>
+</button>
+</div>
+<div class="absolute bottom-4 right-6 flex items-center gap-1 opacity-60 grayscale hover:grayscale-0 transition-all duration-300 pointer-events-none">
+<div class="flex flex-col items-end">
+<span class="text-[7px] font-bold text-white tracking-widest leading-none">DANA</span>
+<span class="text-[7px] font-medium text-white/70 leading-none">PROTECTION</span>
+</div>
+<span class="material-symbols-outlined text-xl text-white" style="font-variation-settings: 'FILL' 1">verified_user</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+<div class="bg-dana/20 p-2 rounded-xl text-dana">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">verified_user</span>
+</div>
+<div>
+<p class="text-xs font-bold text-white uppercase tracking-tight">Pembayaran Aman</p>
+<p class="text-[10px] text-white/40 leading-tight mt-0.5">Metode pembayaran resmi QRIS didukung oleh berbagai e-wallet &amp; perbankan.</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="py-10 flex flex-col items-center gap-4 text-white/20 relative z-10">
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-8 bg-white/10"></div>
+<span class="text-[9px] font-bold tracking-[0.4em] uppercase">Edisi Ramadhan</span>
+<div class="h-[1px] w-8 bg-white/10"></div>
+</div>
+<div class="text-center px-4">
+<p class="text-[9px] font-bold tracking-widest uppercase leading-loose">© 2026 RADITYA NAUFAL RAMADHAN • LEBARAN EDITION<br/>EID MUBARAK</p>
+</div>
+</footer>
+</div>
+
+</body></html>
